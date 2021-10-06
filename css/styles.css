@@ -1,0 +1,170 @@
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* ================================
+COLORS
+ ================================= */
+
+:root {
+    /* --- Primary --- */
+    --very-dark-magenta: hsl(300, 43%, 22%);
+    --soft-pink: hsl(333, 80%, 67%);
+
+    /* --- Neutral --- */
+    --dark-grayish-magenta: hsl(303, 10%, 53%);
+    --light-grayish-magenta: hsl(300, 24%, 96%);
+    --white: hsl(0, 0%, 100%);
+}
+
+/* ================================
+TYPOGRAPHY
+ ================================= */
+
+body {
+    font-size: 15px;
+    line-height: 25px;
+    font-weight: 500;
+    font-family: 'Spartan', sans-serif;
+    color: var(--dark-grayish-magenta);
+    text-align: center;
+    letter-spacing: .5px;
+}
+
+h1,
+.social-rating__text,
+.buyer-name {
+    font-weight: 700;
+}
+
+h1,
+.social-rating__text {
+    color: var(--very-dark-magenta);
+}
+
+h1 {
+    font-size: 32px;
+    line-height: 32px;
+    letter-spacing: 1.4px;
+    margin-bottom: 18px;
+}
+
+.social-info__text {
+    margin-bottom: 40px;
+}
+
+.social-rating__text,
+.testimonial {
+    font-size: 13px;
+}
+
+.buyer-status {
+    color: var(--soft-pink);
+    font-weight: 400;
+}
+
+.testimonial__text {
+    line-height: 22px;
+}
+
+/* ================================
+GENERAL LAYOUT
+ ================================= */
+.body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url("../images/bg-pattern-top-mobile.svg"),
+        url("../images/bg-pattern-bottom-mobile.svg");
+    background-repeat: no-repeat,
+        no-repeat;
+    background-position: top left,
+        bottom right;
+}
+.main {
+    padding: 80px 24px 99px 24px;
+}
+
+.social-ratings {
+    margin-bottom: 49px;
+}
+
+.social-rating,
+.testimonial {
+    border-radius: 8px;
+}
+
+
+.social-rating {
+    background-color: var(--light-grayish-magenta);
+    padding: 16px 54px 11px 54px;
+    text-align: center;
+}
+
+.social-rating + .social-rating {
+    margin-top: 16px;
+}
+
+.social-rating__stars {
+    display: flex;
+    margin-bottom: 10px;
+    justify-content: center;
+}
+
+.social-rating__star {
+    width: 17px;
+}
+
+.social-rating__star + .social-rating__star {
+    margin-left: 8px;
+}
+
+.testimonial {
+    background: var(--very-dark-magenta);
+    color: var(--white);
+    text-align: left;
+    padding: 40px 32px 32px 32px;
+}
+
+.testimonial + .testimonial {
+    margin-top: 16px;
+}
+
+.testimonial__buyer {
+    display: flex;
+    margin-bottom: 15px;
+    align-items: center;
+}
+
+.buyer-img {
+    width: 40px;
+    border-radius: 50px;
+}
+
+.buyer-info {
+    margin-left: 23px;
+    line-height: 15px;
+    position: relative;
+    top: -3px;
+}
+
+.buyer-name {
+    margin-bottom: 5px;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    max-width: 375px;
+}
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
