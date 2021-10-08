@@ -14,6 +14,7 @@ This is a solution to the [Social proof section challenge on Frontend Mentor](ht
     - [Continued development](#continued-development)
     - [Useful resources](#useful-resources)
 - [Author](#author)
+- [Acknowledgments](#acknowledgments)
 
 
 ## Overview
@@ -31,8 +32,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [https://github.com/gchristofferson/social-proof-section](https://github.com/gchristofferson/social-proof-section)
-- Live Site URL: [https://social-proof-section-eight-delta.vercel.app/](https://social-proof-section-eight-delta.vercel.app/)
+- Solution URL: [https://github.com/gchristofferson/social-proof-section/tree/flexbox-alignment-test](hhttps://github.com/gchristofferson/social-proof-section/tree/flexbox-alignment-test)
+- Live Site URL: [https://social-proof-section-928xy06ss-gchristofferson.vercel.app/](https://social-proof-section-928xy06ss-gchristofferson.vercel.app/)
 
 ## My process
 
@@ -62,9 +63,39 @@ This is the code that adds the two images to the background in their proper posi
 ```
 The main thing to remember when adding multiple backgrounds is to add the background properties as a list and in the same order.
 
+I also had a chance to practice aligning and offsetting boxes using flexbox align-self property.  What I learned is that for this to work, I need to set a height or width on the flex container that is higher or wider than the child elements within.  This then gives the necessary space within the container to offset individual elements using align-self.
+
+Here's an example of where I set the height for the social ratings flex container:
+```css
+
+/* the flex container */
+.social-ratings {
+        display: flex;
+        flex-direction: column;
+        width: 540px;
+        align-items: center;
+    }
+
+/* the flex items */
+.social-rating {
+  max-width: 445px;
+}
+
+/* the offset flex items */
+.social-rating:nth-last-child(1) {
+  align-self: flex-end;
+}
+
+.social-rating:nth-last-child(3) {
+  align-self: flex-start;
+}
+```
+
 ### Continued development
 
 This project included interesting offset positioning of the review and testimonial boxes.  I offset them by first setting the position to relative for all boxes and then by selecting the appropriate :nth-child(). I then adjusted the bottom or left positioning. I'm sure there is a more elegant solution and I'd like to explore this more in future projects.
+
+Also, in future projects I think I'll set a default wrapper class with `display: flex` set and then I will add modifier classes so I can adjust width or height, depending on what the design needs.
 
 ### Useful resources
 
@@ -75,3 +106,6 @@ This project included interesting offset positioning of the review and testimoni
 - Frontend Mentor - [@gchristofferson](https://www.frontendmentor.io/profile/gchristofferson)
 - Twitter - [@GreggChristoff2](https://twitter.com/GreggChristoff2)
 
+## Acknowledgments
+
+I'd like to tip my had to [@erelita](https://www.frontendmentor.io/profile/erelita) who helped me fix my flexbox alignment issue!
