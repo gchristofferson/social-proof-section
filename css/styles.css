@@ -184,7 +184,8 @@ GENERAL LAYOUT
         max-width: 1440px;
     }
 
-    .flex {
+    .flex,
+    .testimonial-wrapper {
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -195,25 +196,35 @@ GENERAL LAYOUT
         align-items: baseline;
     }
 
+
     .social-info {
         width: 38%;
     }
 
     .social-ratings {
         margin-bottom: 0;
-        width: 40%;
+        display: flex;
+        flex-direction: column;
+        width: 540px;
+        align-items: center;
+        transform: translateY(-18px);
     }
 
     .social-rating {
-        position: relative;
+        max-width: 445px;
     }
 
-    .social-rating:nth-last-child(2) {
-        right: 45px;
+    .social-rating:nth-last-child(1) {
+        align-self: flex-end;
     }
 
     .social-rating:nth-last-child(3) {
-        right: 90px;
+        align-self: flex-start;
+    }
+
+    .testimonial-wrapper {
+        margin-top: 33px;
+        height: 266px;
     }
 
     .testimonial + .testimonial {
@@ -221,16 +232,12 @@ GENERAL LAYOUT
         margin-left: 16px;
     }
 
-    .testimonial {
-        position: relative;
-    }
-
-    .testimonial:nth-last-child(2) {
-        bottom: 15px;
+    .testimonial:nth-last-child(1) {
+        align-self: flex-end;
     }
 
     .testimonial:nth-last-child(3) {
-        bottom: 30px;
+        align-self: flex-start;
     }
 }
 
@@ -264,5 +271,6 @@ GENERAL LAYOUT
 
     .testimonial {
         max-width: 350px;
+        height: 234px;
     }
 }
